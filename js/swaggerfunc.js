@@ -1,6 +1,6 @@
 import SwaggerUIBundle from 'https://cdn.skypack.dev/swagger-ui-dist/swagger-ui-bundle.js';
 
-export let URLData = "https://raw.githubusercontent.com/hp-pinjam/swagger/main/yaml/openapi.yaml";
+export let URLData = "https://raw.githubusercontent.com/Aplikasi-Fitness/swagger/refs/heads/main/yaml/openapi.yaml";
 
 export const UIData = SwaggerUIBundle({
     url: URLData,
