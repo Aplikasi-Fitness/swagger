@@ -27,8 +27,8 @@ tags:
     externalDocs:
       description: Deskripsi dan Kode Program
       url: http://hp-pinjam.my.id/pasetobackend/
-  - name: hp
-    description: Mobile Phone Operations
+  - name: Workout
+    description: Workout app Operations
     externalDocs:
       description: Deskripsi dan Kode Program
       url: http://hp-pinjam.my.id/pasetobackend/
