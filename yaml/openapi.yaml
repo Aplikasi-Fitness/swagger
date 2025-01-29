@@ -3,7 +3,7 @@ info:
   title: Dokumen API Cloud Function - OpenAPI 3.0
   description: >-
     Dokumen API Cloud Function Aplikasi Workout
-  termsOfService: https://hp-pinjam.my.id/swagger/
+  termsOfService: https://aplikasi-fitness.github.io/swagger/
   contact:
     email: farhanriziq01@gmail.com
   license:
@@ -126,7 +126,7 @@ paths:
   /updateworkout:
     put:
       tags:
-        - hp
+        - workout
       summary: Update Workout
       description: Update workout data in the database 
       operationId: updateHpService
@@ -162,7 +162,7 @@ paths:
   /getdataallworkout:
     get:
       tags:
-        - hp
+        - workout
       summary: Get All Workout
       description: Retrieve all workout data from the database
       operationId: getAllHpService
@@ -186,7 +186,7 @@ paths:
   /deleteworkout:
     delete:
       tags:
-        - hp
+        - workout
       summary: Delete Workout by ID
       description: Delete Workout data from the database by ID
       operationId: deleteHpService
