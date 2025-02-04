@@ -96,13 +96,13 @@ paths:
                 $ref: '#/components/schemas/AuthResponse'
         '405':
           description: Invalid input
-  /insertdataworkout:
+  /workoutupper:
     post:
       tags:
         - workout
       summary: Insert Workout 
       description: Insert workout into the database
-      operationId: insertHpService
+      operationId: insertWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
       requestBody:
@@ -123,13 +123,13 @@ paths:
           description: Forbidden - Admin does not have permission
         '405':
           description: Invalid input
-  /updateworkout:
+  /updateupper:
     put:
       tags:
         - workout
       summary: Update Workout
       description: Update workout data in the database 
-      operationId: updateHpService
+      operationId: updateWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
       parameters:
@@ -159,13 +159,13 @@ paths:
           description: Not Found - Workout not found
         '405':
           description: Invalid input
-  /getdataallworkout:
+  /getupper:
     get:
       tags:
         - workout
       summary: Get All Workout
       description: Retrieve all workout data from the database
-      operationId: getAllHpService
+      operationId: getAllWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
       responses:
@@ -183,13 +183,249 @@ paths:
           description: Forbidden - Admin does not have permission
         '405':
           description: Invalid input
-  /deleteworkout:
+  /deleteupper:
     delete:
       tags:
         - workout
       summary: Delete Workout by ID
       description: Delete Workout data from the database by ID
-      operationId: deleteHpService
+      operationId: deleteWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      parameters:
+        - name: nomorid
+          in: path
+          description: ID of the Workout to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '404':
+          description: Not Found - Workout not found
+        '405':
+          description: Invalid input
+  /insertdatahp:
+    post:
+      tags:
+        - workout
+      summary: Insert Workout 
+      description: Insert workout into the database
+      operationId: insertWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Workout'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '405':
+          description: Invalid input
+  /updatehp:
+    put:
+      tags:
+        - workout
+      summary: Update Workout
+      description: Update workout data in the database 
+      operationId: updateWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      parameters:
+        - name: nomorid
+          in: path
+          description: ID of the workout to update
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Workout'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '404':
+          description: Not Found - Workout not found
+        '405':
+          description: Invalid input
+  /getdataallhp:
+    get:
+      tags:
+        - workout
+      summary: Get All Workout
+      description: Retrieve all workout data from the database
+      operationId: getAllWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MobilePhone'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '405':
+          description: Invalid input
+  /deletehp:
+    delete:
+      tags:
+        - workout
+      summary: Delete Workout by ID
+      description: Delete Workout data from the database by ID
+      operationId: deleteWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      parameters:
+        - name: nomorid
+          in: path
+          description: ID of the Workout to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '404':
+          description: Not Found - Workout not found
+        '405':
+          description: Invalid input
+  /workoutlower:
+    post:
+      tags:
+        - workout
+      summary: Insert Workout 
+      description: Insert workout into the database
+      operationId: insertWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Workout'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '405':
+          description: Invalid input
+  /updatelower:
+    put:
+      tags:
+        - workout
+      summary: Update Workout
+      description: Update workout data in the database 
+      operationId: updateWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      parameters:
+        - name: nomorid
+          in: path
+          description: ID of the workout to update
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Workout'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '404':
+          description: Not Found - Workout not found
+        '405':
+          description: Invalid input
+  /getlower:
+    get:
+      tags:
+        - workout
+      summary: Get All Workout
+      description: Retrieve all workout data from the database
+      operationId: getAllWorkout
+      security:
+        - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MobilePhone'
+        '401':
+          description: Unauthorized - Admin not logged in
+        '403':
+          description: Forbidden - Admin does not have permission
+        '405':
+          description: Invalid input
+  /deletelower:
+    delete:
+      tags:
+        - workout
+      summary: Delete Workout by ID
+      description: Delete Workout data from the database by ID
+      operationId: deleteWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
       parameters:
