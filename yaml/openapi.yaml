@@ -99,7 +99,7 @@ paths:
   /workoutupper:
     post:
       tags:
-        - workout
+        - Workout Upper
       summary: Insert Workout 
       description: Insert workout into the database
       operationId: insertWorkout
@@ -126,7 +126,7 @@ paths:
   /updateupper:
     put:
       tags:
-        - workout
+        - Workout Upper
       summary: Update Workout
       description: Update workout data in the database 
       operationId: updateWorkout
@@ -162,7 +162,7 @@ paths:
   /getupper:
     get:
       tags:
-        - workout
+        - Workout Upper
       summary: Get All Workout
       description: Retrieve all workout data from the database
       operationId: getAllWorkout
@@ -186,7 +186,7 @@ paths:
   /deleteupper:
     delete:
       tags:
-        - workout
+        - Workout Upper
       summary: Delete Workout by ID
       description: Delete Workout data from the database by ID
       operationId: deleteWorkout
@@ -335,7 +335,7 @@ paths:
   /workoutlower:
     post:
       tags:
-        - workout
+        - Workout Lower
       summary: Insert Workout 
       description: Insert workout into the database
       operationId: insertWorkout
@@ -362,7 +362,7 @@ paths:
   /updatelower:
     put:
       tags:
-        - workout
+        - Workout Lower
       summary: Update Workout
       description: Update workout data in the database 
       operationId: updateWorkout
@@ -398,7 +398,7 @@ paths:
   /getlower:
     get:
       tags:
-        - workout
+        - Workout Lower
       summary: Get All Workout
       description: Retrieve all workout data from the database
       operationId: getAllWorkout
@@ -422,7 +422,7 @@ paths:
   /deletelower:
     delete:
       tags:
-        - workout
+        - Workout Lower
       summary: Delete Workout by ID
       description: Delete Workout data from the database by ID
       operationId: deleteWorkout
