@@ -459,6 +459,18 @@ components:
         username:
           type: string
           example: edi
+        email:
+          type: string
+          example: farhan@gmail.com
+        height:
+          type: float64
+          example: 175
+        weight:
+          type: float64
+          example: 73
+        age:
+          type: float64
+          example: 27
         password:
           type: string
           example: edi12345
