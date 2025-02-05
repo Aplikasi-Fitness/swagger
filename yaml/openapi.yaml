@@ -33,7 +33,7 @@ tags:
       description: Deskripsi dan Kode Program
       url: http://hp-pinjam.my.id/pasetobackend/
 paths:
-  /registeruser:
+  /Registrasi:
     post:
       tags:
         - register
