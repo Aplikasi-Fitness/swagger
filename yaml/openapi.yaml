@@ -132,13 +132,13 @@ paths:
       operationId: updateWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
-      parameters:
-        - name: nomorid
-          in: path
-          description: ID of the workout to update
-          required: true
-          schema:
-            type: integer
+      # parameters:
+      #   - name: nomorid
+      #     in: path
+      #     description: ID of the workout to update
+      #     required: true
+      #     schema:
+      #       type: integer
       requestBody:
         content:
           application/json:
@@ -250,13 +250,13 @@ paths:
       operationId: updateWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
-      parameters:
-        - name: nomorid
-          in: path
-          description: ID of the workout to update
-          required: true
-          schema:
-            type: integer
+      # parameters:
+      #   - name: nomorid
+      #     in: path
+      #     description: ID of the workout to update
+      #     required: true
+      #     schema:
+      #       type: integer
       requestBody:
         content:
           application/json:
@@ -368,13 +368,13 @@ paths:
       operationId: updateWorkout
       security:
         - Login: []  # Menentukan bahwa endpoint ini membutuhkan skema keamanan 'Login'
-      parameters:
-        - name: nomorid
-          in: path
-          description: ID of the workout to update
-          required: true
-          schema:
-            type: integer
+      # parameters:
+      #   - name: nomorid
+      #     in: path
+      #     description: ID of the workout to update
+      #     required: true
+      #     schema:
+      #       type: integer
       requestBody:
         content:
           application/json:
