@@ -75,7 +75,7 @@ paths:
                 $ref: '#/components/schemas/AuthResponse'
         '405':
           description: Invalid input
-  /adminlogin:
+  /loginn:
     post:
       tags:
         - auth
