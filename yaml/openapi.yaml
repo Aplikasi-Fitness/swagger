@@ -54,34 +54,34 @@ paths:
                 $ref: '#/components/schemas/Response'
         '405':
           description: Invalid input
-  /Login:
-    post:
-      tags:
-        - auth
-      summary: User Login to Get Token
-      description: User Login and Get Token
-      operationId: authService
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Auth'
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AuthResponse'
-        '405':
-          description: Invalid input
+  # /Login:
+  #   post:
+  #     tags:
+  #       - auth
+  #     summary: User Login to Get Token
+  #     description: User Login and Get Token
+  #     operationId: authService
+  #     requestBody:
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#/components/schemas/Auth'
+  #     responses:
+  #       '200':
+  #         description: successful operation
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#/components/schemas/AuthResponse'
+  #       '405':
+  #         description: Invalid input
   /loginn:
     post:
       tags:
         - auth
-      summary: Admin Login to Get Token
-      description: Admin Login and Get Token using Email and Password
-      operationId: adminLoginService
+      summary: Login to Get Token
+      description: Login and Get Token using Email and Password
+      operationId: LoginService
       requestBody:
         content:
           application/json:
